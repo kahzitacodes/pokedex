@@ -179,8 +179,8 @@ export const GlobalStyles = () => (
 
       :root[data-theme='dark'] {
         --bg-primary: ${theme.colors.charcoal100};
-        --bg-secondary: ${theme.colors.pureBlack};
-        --bg-tertiary: ${theme.colors.charcoal90};
+        --bg-secondary: ${theme.colors.charcoal90};
+        --bg-tertiary: ${theme.colors.charcoal80};
 
         --btn-primary-bg: ${theme.colors.pureWhite};
         --btn-primary-bg_hover: ${theme.colors.charcoal10};

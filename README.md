@@ -215,6 +215,6 @@ This project was developed as part of a selection process.
 
 ---
 
-**Public link**: [https://github.com/kahzitacodes/pokedex]
+**Public link**: [https://kahzitacodes.github.io/pokedex/]
 
 **Repository**: [https://github.com/kahzitacodes/pokedex]
