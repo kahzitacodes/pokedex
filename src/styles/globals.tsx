@@ -152,7 +152,7 @@ export const GlobalStyles = () => (
         --bg-tertiary: ${theme.colors.charcoal5};
 
         --btn-primary-bg: ${theme.colors.charcoal100};
-        --btn-primary-bg_hover: ${theme.colors.charcoal90};
+        --btn-primary-bg_hover: ${theme.colors.charcoal80};
         --btn-primary-bg_disabled: ${theme.colors.charcoal20};
         --btn-primary-text: ${theme.colors.pureWhite};
         --btn-primary-text_disabled: ${theme.colors.charcoal50};
@@ -167,14 +167,16 @@ export const GlobalStyles = () => (
         --text-primary: ${theme.colors.charcoal100};
         --text-primary_on-color: ${theme.colors.pureWhite};
         --text-secondary: ${theme.colors.charcoal70};
+        --text-tertiary: ${theme.colors.charcoal50};
 
         --border-primary: ${theme.colors.charcoal5};
-        --border-primary_hover: ${theme.colors.charcoal20};
+        --border-primary_hover: ${theme.colors.charcoal10};
         --border-secondary: ${theme.colors.charcoal20};
         --border-secondary_hover: ${theme.colors.charcoal30};
 
         /* Effects */
-        --shadow-lg: ${theme.effects.shadow.lg};
+        --shadow-lg: ${theme.effects.shadow.lg.light};
+        --shadow-md: ${theme.effects.shadow.md.light};
       }
 
       :root[data-theme='dark'] {
@@ -183,13 +185,13 @@ export const GlobalStyles = () => (
         --bg-tertiary: ${theme.colors.charcoal80};
 
         --btn-primary-bg: ${theme.colors.pureWhite};
-        --btn-primary-bg_hover: ${theme.colors.charcoal10};
+        --btn-primary-bg_hover: ${theme.colors.charcoal20};
         --btn-primary-bg_disabled: ${theme.colors.charcoal70};
         --btn-primary-text: ${theme.colors.charcoal100};
         --btn-primary-text_disabled: ${theme.colors.charcoal50};
 
         --btn-secondary-bg: ${theme.colors.transparent};
-        --btn-secondary-bg_hover: ${theme.colors.charcoal90};
+        --btn-secondary-bg_hover: ${theme.colors.charcoal80};
         --btn-secondary-text: ${theme.colors.pureWhite};
         --btn-secondary-text_disabled: ${theme.colors.charcoal70};
         --btn-secondary-border: ${theme.colors.pureWhite};
@@ -198,11 +200,16 @@ export const GlobalStyles = () => (
         --text-primary: ${theme.colors.pureWhite};
         --text-primary_on-color: ${theme.colors.charcoal100};
         --text-secondary: ${theme.colors.charcoal50};
+        --text-tertiary: ${theme.colors.charcoal70};
 
         --border-primary: ${theme.colors.charcoal90};
-        --border-primary_hover: ${theme.colors.charcoal70};
+        --border-primary_hover: ${theme.colors.charcoal80};
         --border-secondary: ${theme.colors.charcoal70};
         --border-secondary_hover: ${theme.colors.charcoal50};
+
+        /* Effects */
+        --shadow-lg: ${theme.effects.shadow.lg.dark};
+        --shadow-md: ${theme.effects.shadow.md.dark};
       }
 
       * {

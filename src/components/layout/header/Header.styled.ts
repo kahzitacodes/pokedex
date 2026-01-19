@@ -8,6 +8,7 @@ export const StyledHeader = styled.header`
   background-color: var(--surface-dark);
   color: var(--text-on-dark);
   padding: var(--spacing-5) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 `
 
 export const StyledLogoLink = styled.a`

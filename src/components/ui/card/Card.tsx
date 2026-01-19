@@ -24,14 +24,14 @@ export function Card(props: React.ComponentProps<'div'> & PropTypes) {
 				<img src={imageSrc} alt={title} loading='lazy' />
 			</S.StyledCardImage>
 			<S.StyledContent>
-				<div>
+				<S.StyledInfo>
 					<Text weight='bold' color='secondary'>
 						#{formatPokemonNumber(recordId)}
 					</Text>
-					<Heading size='h3' as='h3' color='primary' className='py-1'>
+					<Heading size='h3' as='h3' color='primary'>
 						{title}
 					</Heading>
-				</div>
+				</S.StyledInfo>
 				{tags?.length && (
 					<div className='flex gap-2 flex-wrap '>
 						{tags.map((tag) => (
