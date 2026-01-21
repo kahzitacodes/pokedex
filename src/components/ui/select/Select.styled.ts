@@ -24,6 +24,9 @@ export const StyledTrigger = styled(SelectPrimitive.Trigger)`
     border-color: hsl(var(--ring));
     box-shadow: 0 0 0 2px hsl(var(--ring) / 0.2);
   }
+  &:not(:focus-visible):not(:focus):not(:disabled):hover {
+		border-color: var(--border-secondary_hover);
+	}
 `
 
 export const StyledContent = styled(SelectPrimitive.Content)`

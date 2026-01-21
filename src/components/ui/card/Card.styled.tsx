@@ -1,5 +1,6 @@
 import { css } from '@emotion/react'
 import styled from '@emotion/styled'
+import { theme } from '@/styles'
 import type { CardDirection } from './Card.types'
 
 export const StyledCardImage = styled.div`
@@ -37,8 +38,7 @@ ${({ direction }) => css`
 
   &:hover {
     border: 1px solid var(--border-primary_hover);
-    box-shadow: var(--shadow-lg);
-    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
 
     ${StyledCardImage} {
       img {
@@ -52,31 +52,63 @@ export const StyledContent = styled.div`
   display: flex;
 `
 
+export const StyledInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+
 const modifier = {
 	horizontal: css`
     flex-direction: row;
     gap: var(--spacing-5);
     align-items: center;
+    :hover {
+      transform: scale(1.03);
+    }
 
     ${StyledCardImage} {
+      min-width: 12rem;
       width: 12rem;
     }
 
     ${StyledContent} {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      gap: var(--spacing-6);
+      flex-direction: column;
+      gap: var(--spacing-1);
       width: 100%;
+    }
+
+    ${StyledInfo} {
+      padding-bottom: var(--spacing-1);
+    }
+
+    @media (min-width: ${theme.breakpoints.sm}) {
+      ${StyledContent} {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: var(--spacing-6);
+        width: 100%;
+      }
+
+      ${StyledInfo} {
+        padding-bottom: var(--spacing-1);
+      }
     }
   `,
 	vertical: css`
     flex-direction: column;
     gap: var(--spacing-3);
+    :hover {
+      transform: scale(1.05);
+    }
 
     ${StyledContent} {
       flex-direction: column;
       gap: var(--spacing-1)
+    }
+
+    ${StyledInfo} {
+      padding-bottom: var(--spacing-1);
     }
   `,
 }

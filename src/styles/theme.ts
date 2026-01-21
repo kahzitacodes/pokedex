@@ -67,9 +67,10 @@ export const theme = {
 		pureWhite: '#FFFFFF',
 		pureBlack: '#000000',
 		charcoal100: '#060606',
-		charcoal90: '#26262A',
-		charcoal80: '#41414A',
-		charcoal70: '#666678',
+		charcoal90: '#1D1D23',
+		charcoal80: '#31313A',
+		charcoal70: '#41414A',
+		charcoal60: '#666678',
 		charcoal50: '#9797A9',
 		charcoal30: '#C7C7D2',
 		charcoal20: '#D9D9DF',
@@ -128,7 +129,16 @@ export const theme = {
 	},
 	effects: {
 		shadow: {
-			lg: '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+			md: {
+				light:
+					'0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+				dark: '0 10px 30px -3px rgb(0 0 0 / 1), 0 4px 6px -4px rgb(0 0 0 / 1)',
+			},
+			lg: {
+				light:
+					'0 10px 30px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+				dark: '0 10px 30px -3px rgb(0 0 0 / 1), 0 4px 6px -4px rgb(0 0 0 / 1)',
+			},
 		},
 		ring: '240.0 10% 63%',
 	},

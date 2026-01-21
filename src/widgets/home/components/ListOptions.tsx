@@ -1,8 +1,8 @@
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 import { FaList } from 'react-icons/fa6'
 import { Button, Label, Select } from '@/components'
-import type { ViewMode } from '@/types'
 import { SortOptions } from '@/constants'
+import type { ViewMode } from '@/types'
 import type { SortOption } from '@/types/pokemon'
 
 export type ListOptionsProps = {
@@ -52,7 +52,7 @@ export function ListOptions({
 				/>
 			</div>
 			<div className='flex gap-2 items-center justify-end flex-1'>
-				<Label>Sort by:</Label>
+				<Label className='hide-until-sm'>Sort by:</Label>
 				<Select
 					options={SORT_OPTIONS}
 					value={sortBy}

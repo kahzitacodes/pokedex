@@ -70,9 +70,7 @@ export function Details({
 						<Text weight='bold' color='secondary' size='lg'>
 							#{formatPokemonNumber(pokemon.id)}
 						</Text>
-						<Heading size='h1' as='h1'>
-							{pokemon.displayName}
-						</Heading>
+						<Heading>{pokemon.displayName}</Heading>
 						{pokemon.genus && (
 							<Text size='md' color='secondary'>
 								{pokemon.genus}
@@ -81,7 +79,7 @@ export function Details({
 					</div>
 
 					<div className='flex flex-col gap-2'>
-						<Text weight='semibold' size='sm' color='secondary'>
+						<Text weight='semibold' size='sm' color='tertiary'>
 							Type
 						</Text>
 						<div className='flex gap-2 flex-wrap'>
@@ -93,7 +91,7 @@ export function Details({
 
 					{pokemon.description && (
 						<div className='flex flex-col gap-2'>
-							<Text weight='semibold' size='sm' color='secondary'>
+							<Text weight='semibold' size='sm' color='tertiary'>
 								Description
 							</Text>
 							<Text size='md'>{pokemon.description}</Text>
@@ -102,7 +100,7 @@ export function Details({
 
 					<Divider />
 					<div className='flex flex-col gap-2'>
-						<Text weight='semibold' size='sm' color='secondary'>
+						<Text weight='semibold' size='sm' color='tertiary'>
 							Physical
 						</Text>
 						<Grid columns={2}>
@@ -127,7 +125,7 @@ export function Details({
 					<Divider />
 
 					<div className='flex flex-col gap-3'>
-						<Text weight='semibold' size='sm' color='secondary'>
+						<Text weight='semibold' size='sm' color='tertiary'>
 							Base Stats
 						</Text>
 						<div className='flex flex-col gap-4'>
@@ -141,7 +139,7 @@ export function Details({
 					</div>
 
 					<div className='flex flex-col gap-2'>
-						<Text weight='semibold' size='sm' color='secondary'>
+						<Text weight='semibold' size='sm' color='tertiary'>
 							Abilities
 						</Text>
 						<div className='flex flex-col gap-2'>
