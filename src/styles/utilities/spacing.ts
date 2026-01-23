@@ -13,12 +13,7 @@ const generateUtilities = (
 		right: string
 	},
 ) => {
-	return (
-		Object.entries(theme.spacings) as [
-			string,
-			string | number,
-		][]
-	)
+	return (Object.entries(theme.spacings) as [string, string | number][])
 		.map(([key, value]) => {
 			const className = key.toString().replace('.', '_')
 

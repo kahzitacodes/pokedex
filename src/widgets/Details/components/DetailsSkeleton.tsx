@@ -59,9 +59,7 @@ export function DetailsSkeleton() {
 					<div className='flex flex-col gap-3'>
 						<Skeleton width='8rem' height='1.6rem' />
 						<div className='flex flex-col gap-4'>
-							{[
-								...Array(6),
-							].map((_, i) => (
+							{[...Array(6)].map((_, i) => (
 								<Skeleton
 									key={`skeleton-item-${i.toString()}`}
 									width='100%'

@@ -8,10 +8,7 @@ const mockPokemon: Pokemon[] = [
 		id: 1,
 		name: 'Bulbasaur',
 		number: '0001',
-		types: [
-			'grass',
-			'poison',
-		],
+		types: ['grass', 'poison'],
 		image: 'bulbasaur.png',
 		stats: {
 			hp: 45,
@@ -30,9 +27,7 @@ const mockPokemon: Pokemon[] = [
 		id: 25,
 		name: 'Pikachu',
 		number: '0025',
-		types: [
-			'electric',
-		],
+		types: ['electric'],
 		image: 'pikachu.png',
 		stats: {
 			hp: 35,
@@ -51,10 +46,7 @@ const mockPokemon: Pokemon[] = [
 		id: 6,
 		name: 'Charizard',
 		number: '0006',
-		types: [
-			'fire',
-			'flying',
-		],
+		types: ['fire', 'flying'],
 		image: 'charizard.png',
 		stats: {
 			hp: 78,
@@ -73,9 +65,7 @@ const mockPokemon: Pokemon[] = [
 		id: 150,
 		name: 'Mewtwo',
 		number: '0150',
-		types: [
-			'psychic',
-		],
+		types: ['psychic'],
 		image: 'mewtwo.png',
 		stats: {
 			hp: 106,
@@ -176,22 +166,12 @@ describe('searchPokemon', () => {
 describe('sortPokemon', () => {
 	it('sorts by number ascending', () => {
 		const result = sortPokemon(mockPokemon, SortOptions.NUMBER_ASC)
-		expect(result.map((p) => p.id)).toEqual([
-			1,
-			6,
-			25,
-			150,
-		])
+		expect(result.map((p) => p.id)).toEqual([1, 6, 25, 150])
 	})
 
 	it('sorts by number descending', () => {
 		const result = sortPokemon(mockPokemon, SortOptions.NUMBER_DESC)
-		expect(result.map((p) => p.id)).toEqual([
-			150,
-			25,
-			6,
-			1,
-		])
+		expect(result.map((p) => p.id)).toEqual([150, 25, 6, 1])
 	})
 
 	it('sorts by name ascending (A-Z)', () => {
@@ -215,9 +195,7 @@ describe('sortPokemon', () => {
 	})
 
 	it('does not mutate the original array', () => {
-		const original = [
-			...mockPokemon,
-		]
+		const original = [...mockPokemon]
 		sortPokemon(mockPokemon, SortOptions.NAME_ASC)
 		expect(mockPokemon).toEqual(original)
 	})
@@ -234,9 +212,7 @@ describe('sortPokemon', () => {
 	})
 
 	it('handles single item array', () => {
-		const single = [
-			mockPokemon[0],
-		]
+		const single = [mockPokemon[0]]
 		const result = sortPokemon(single, SortOptions.NUMBER_ASC)
 		expect(result).toHaveLength(1)
 		expect(result[0].name).toBe('Bulbasaur')

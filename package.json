@@ -6,8 +6,9 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
-		"lint": "npx @biomejs/biome lint --write",
-		"format": "npx @biomejs/biome format --write",
+		"lint": "npx @biomejs/biome lint --write ./src",
+		"format": "npx @biomejs/biome format --write ./src",
+		"check": "npx @biomejs/biome check --write ./src",
 		"preview": "vite preview",
 		"test": "vitest run",
 		"test:watch": "vitest run --watch",
