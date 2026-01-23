@@ -47,9 +47,7 @@ function AllProviders({ children }: WrapperProps) {
 function customRender(
 	ui: ReactElement,
 	{
-		initialEntries = [
-			'/',
-		],
+		initialEntries = ['/'],
 		withRouter = true,
 		withTheme = true,
 		withQueryClient = true,

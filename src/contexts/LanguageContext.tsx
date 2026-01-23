@@ -70,9 +70,7 @@ export const LanguageProvider = ({ children }: LanguageProviderProps) => {
 
 		localStorage.setItem('language', language)
 		document.documentElement.setAttribute('lang', language)
-	}, [
-		language,
-	])
+	}, [language])
 
 	const setLanguage = (newLanguage: LanguageCode) => {
 		setLanguageState(newLanguage)

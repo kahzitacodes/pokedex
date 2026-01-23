@@ -20,9 +20,7 @@ export function searchPokemon(pokemon: Pokemon[], query: string): Pokemon[] {
 }
 
 export function sortPokemon(pokemon: Pokemon[], sortBy: SortOption): Pokemon[] {
-	const sorted = [
-		...pokemon,
-	]
+	const sorted = [...pokemon]
 
 	switch (sortBy) {
 		case SortOptions.NUMBER_ASC:

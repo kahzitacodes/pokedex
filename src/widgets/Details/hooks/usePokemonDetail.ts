@@ -16,20 +16,12 @@ export function usePokemonDetail(id: string | undefined): UsePokemonDetail {
 	const isValidId = numericId !== null && !Number.isNaN(numericId)
 
 	const { data, isLoading, error } = useQuery<Pokemon, Error>({
-		queryKey: [
-			'pokemon',
-			'detail',
-			numericId,
-			language,
-		],
+		queryKey: ['pokemon', 'detail', numericId, language],
 		queryFn: () =>
 			pokemonApi.fetchPokemonWithSpecies(numericId as number, language),
 		enabled: isValidId,
 		initialData: () => {
-			const listData = queryClient.getQueryData<Pokemon[]>([
-				'pokemon',
-				'list',
-			])
+			const listData = queryClient.getQueryData<Pokemon[]>(['pokemon', 'list'])
 			return listData?.find((p) => p.id === numericId)
 		},
 		staleTime: (query) => {

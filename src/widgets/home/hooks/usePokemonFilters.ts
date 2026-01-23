@@ -53,12 +53,7 @@ export function usePokemonFilters(pokemonList: Pokemon[]): UsePokemonFilters {
 			page: currentPage,
 			itemsPerPage: ITEMS_PER_PAGE,
 		})
-	}, [
-		pokemonList,
-		searchQuery,
-		sortBy,
-		currentPage,
-	])
+	}, [pokemonList, searchQuery, sortBy, currentPage])
 
 	const updateParams = (updates: Record<string, string | null>) => {
 		setSearchParams((prev) => {

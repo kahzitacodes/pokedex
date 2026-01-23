@@ -32,9 +32,7 @@ export const ThemeProvider = ({ children }: ThemeProviderProps) => {
 	useEffect(() => {
 		localStorage.setItem('theme', mode)
 		document.documentElement.setAttribute('data-theme', mode)
-	}, [
-		mode,
-	])
+	}, [mode])
 
 	const toggleTheme = () => {
 		setMode((prev) => (prev === 'light' ? 'dark' : 'light'))

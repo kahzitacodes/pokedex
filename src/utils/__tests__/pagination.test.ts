@@ -11,9 +11,7 @@ function createMockPokemon(count: number): Pokemon[] {
 			id: i + 1,
 			name: `Pokemon${i + 1}`,
 			number: String(i + 1).padStart(4, '0'),
-			types: [
-				'normal',
-			],
+			types: ['normal'],
 			image: `pokemon${i + 1}.png`,
 			stats: {
 				hp: 50,

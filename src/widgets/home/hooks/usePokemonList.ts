@@ -10,10 +10,7 @@ interface UsePokemonList {
 
 export function usePokemonList(): UsePokemonList {
 	const { data, isLoading, error } = useQuery<Pokemon[], Error>({
-		queryKey: [
-			'pokemon',
-			'list',
-		],
+		queryKey: ['pokemon', 'list'],
 		queryFn: () => pokemonApi.fetchAllFirstGenPokemon(),
 	})
 
