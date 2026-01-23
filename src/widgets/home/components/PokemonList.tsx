@@ -2,6 +2,7 @@ import { Card, type CardDirection } from '@/components'
 import { type Columns, Grid, type ResponsiveColumns } from '@/components/layout'
 import type { Pokemon } from '@/types'
 import type { ViewMode } from '@/types/listing'
+import { capitalize } from '@/utils'
 
 export type PokemonListProps = {
 	pokemons: Pokemon[]
@@ -32,12 +33,12 @@ export function PokemonList(props: PokemonListProps) {
 				<Card
 					direction={cardDirection}
 					key={pokemon.id}
-					recordId={pokemon.id}
+					recordId={pokemon.number}
 					title={pokemon.displayName}
 					image={pokemon.image}
 					tags={pokemon.types.map((type) => ({
 						color: type,
-						label: type.charAt(0).toUpperCase() + type.slice(1),
+						label: capitalize(type),
 					}))}
 					onClick={() => onPokemonClick?.(pokemon.id)}
 				/>

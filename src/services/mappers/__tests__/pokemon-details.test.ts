@@ -1,10 +1,10 @@
-import { describe, it, expect } from 'vitest'
-import {
-	transformPokemonData,
-	extractGenus,
-	extractDescription,
-} from '../pokemon-details'
+import { describe, expect, it } from 'vitest'
 import type { PokemonApiResponse, PokemonSpeciesApiResponse } from '@/types'
+import {
+	extractDescription,
+	extractGenus,
+	transformPokemonData,
+} from '../pokemon-details'
 
 // Mock API response for Pikachu
 const mockPikachuApiResponse: PokemonApiResponse = {
@@ -158,7 +158,7 @@ describe('pokemon-details mapper', () => {
 			expect(result.id).toBe(25)
 			expect(result.name).toBe('pikachu')
 			expect(result.displayName).toBe('Pikachu')
-			expect(result.number).toBe('#025')
+			expect(result.number).toBe('#0025')
 		})
 
 		it('formats number with leading zeros', () => {
@@ -175,9 +175,9 @@ describe('pokemon-details mapper', () => {
 				id: 150,
 			}
 
-			expect(transformPokemonData(singleDigit).number).toBe('#001')
-			expect(transformPokemonData(doubleDigit).number).toBe('#025')
-			expect(transformPokemonData(tripleDigit).number).toBe('#150')
+			expect(transformPokemonData(singleDigit).number).toBe('#0001')
+			expect(transformPokemonData(doubleDigit).number).toBe('#0025')
+			expect(transformPokemonData(tripleDigit).number).toBe('#0150')
 		})
 
 		it('capitalizes display name correctly', () => {
@@ -223,9 +223,7 @@ describe('pokemon-details mapper', () => {
 
 		it('extracts types correctly', () => {
 			const result = transformPokemonData(mockPikachuApiResponse)
-			expect(result.types).toEqual([
-				'electric',
-			])
+			expect(result.types).toEqual(['electric'])
 
 			const multiType: PokemonApiResponse = {
 				...mockPikachuApiResponse,
@@ -246,10 +244,7 @@ describe('pokemon-details mapper', () => {
 					},
 				],
 			}
-			expect(transformPokemonData(multiType).types).toEqual([
-				'grass',
-				'poison',
-			])
+			expect(transformPokemonData(multiType).types).toEqual(['grass', 'poison'])
 		})
 
 		it('extracts stats correctly', () => {

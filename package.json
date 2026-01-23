@@ -9,8 +9,8 @@
 		"lint": "npx @biomejs/biome lint --write",
 		"format": "npx @biomejs/biome format --write",
 		"preview": "vite preview",
-		"test": "vitest",
-		"test:run": "vitest run",
+		"test": "vitest run",
+		"test:watch": "vitest run --watch",
 		"typecheck": "tsc --project tsconfig.json --noEmit",
 		"prepare": "husky install"
 	},

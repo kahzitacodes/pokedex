@@ -1,5 +1,4 @@
 import { Badge } from '@/components/ui/badge'
-import { formatPokemonNumber } from '@/utils'
 import { Heading } from '../heading'
 import { Text } from '../text'
 import * as S from './Card.styled'
@@ -26,7 +25,7 @@ export function Card(props: React.ComponentProps<'div'> & PropTypes) {
 			<S.StyledContent>
 				<S.StyledInfo>
 					<Text weight='bold' color='secondary'>
-						#{formatPokemonNumber(recordId)}
+						{recordId}
 					</Text>
 					<Heading size='h3' as='h3' color='primary'>
 						{title}

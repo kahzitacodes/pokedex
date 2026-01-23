@@ -9,7 +9,7 @@ import {
 	Text,
 } from '@/components'
 import { Container, Grid } from '@/components/layout'
-import { formatPokemonNumber } from '@/utils'
+import { capitalize } from '@/utils'
 import { usePokemonDetail } from '@/widgets/Details/hooks/usePokemonDetail'
 import * as S from './components/Details.styled'
 import { DetailsSkeleton } from './components/DetailsSkeleton'
@@ -68,7 +68,7 @@ export function Details({
 				<div className='flex flex-col gap-6'>
 					<div className='flex flex-col gap-1'>
 						<Text weight='bold' color='secondary' size='lg'>
-							#{formatPokemonNumber(pokemon.id)}
+							{pokemon.number}
 						</Text>
 						<Heading>{pokemon.displayName}</Heading>
 						{pokemon.genus && (
@@ -84,7 +84,7 @@ export function Details({
 						</Text>
 						<div className='flex gap-2 flex-wrap'>
 							{pokemon.types.map((type) => (
-								<Badge key={type} color={type} label={type} />
+								<Badge key={type} color={type} label={capitalize(type)} />
 							))}
 						</div>
 					</div>
