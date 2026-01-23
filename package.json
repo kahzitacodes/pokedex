@@ -6,12 +6,13 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc -b && vite build",
-		"lint": "npx @biomejs/biome lint --write ./src",
-		"format": "npx @biomejs/biome format --write ./src",
+		"lint": "npx @biomejs/biome lint --write",
+		"format": "npx @biomejs/biome format --write",
 		"preview": "vite preview",
 		"test": "vitest",
 		"test:run": "vitest run",
-		"typecheck": "tsc --project tsconfig.json --noEmit"
+		"typecheck": "tsc --project tsconfig.json --noEmit",
+		"prepare": "husky install"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.14.0",
@@ -37,7 +38,9 @@
 		"@types/react-dom": "^19.2.3",
 		"@vitejs/plugin-react": "^5.1.1",
 		"globals": "^16.5.0",
+		"husky": "^8.0.0",
 		"jsdom": "^27.4.0",
+		"lint-staged": "^16.2.7",
 		"typescript": "~5.9.3",
 		"vite": "^7.2.4",
 		"vitest": "^4.0.17"
