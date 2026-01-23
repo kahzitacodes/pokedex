@@ -4,7 +4,7 @@ export type CardDirection = 'horizontal' | 'vertical'
 
 export type PropTypes = {
 	title: string
-	recordId: number
+	recordId: string
 	image?: string
 	tags?: {
 		color: PokemonType

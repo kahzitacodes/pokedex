@@ -6,17 +6,16 @@
 		"useIgnoreFile": true
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": true
 	},
 	"formatter": {
 		"enabled": true,
 		"indentStyle": "tab",
-		"indentWidth": 2,
 		"lineWidth": 80,
 		"lineEnding": "lf",
 		"attributePosition": "auto",
 		"formatWithErrors": false,
-		"expand": "always"
+		"expand": "auto"
 	},
 	"linter": {
 		"enabled": true,
@@ -32,7 +31,8 @@
 			"jsxQuoteStyle": "single",
 			"quoteProperties": "asNeeded",
 			"bracketSameLine": false
-		}
+		},
+		"globals": ["describe", "it", "expect", "vi", "beforeEach", "afterEach"]
 	},
 	"assist": {
 		"enabled": true,
